@@ -40,16 +40,6 @@
 		<key>parent_recipes</key>
 		<dict>
 			<key>com.github.ronniejones.download.Keka</key>
-			<dict>
-				<key>git_hash</key>
-				<string>1673ab44a1ee6c1650538d8088035343687b8c39</string>
-				<key>path</key>
-				<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.hansen-m-recipes/Keka/Keka.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>44b5f441e33b7e8dba04639260c4cc4c74898615ceffab005aa7193b22f60f07</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
