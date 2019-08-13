@@ -6,3 +6,4 @@
 *.gz
 *.pem
 *.p7b
+*.DS_Store
