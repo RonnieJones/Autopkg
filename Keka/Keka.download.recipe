@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest version of Keka.</string>
     <key>Identifier</key>
-    <string>com.github.hansen-m.download.Keka</string>
+    <string>com.github.ronniejones.download.Keka</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
