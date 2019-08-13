@@ -18,6 +18,8 @@
 		<string>Keka</string>
 		<key>POLICY_CATEGORY</key>
 		<string>Testing</string>
+		<key>pkg_path</key>
+		<string></string>
 		<key>POLICY_TEMPLATE</key>
 		<string>PolicyTemplate.xml</string>
 		<key>SELF_SERVICE_DESCRIPTION</key>
