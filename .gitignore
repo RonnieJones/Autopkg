@@ -1,0 +1,8 @@
+.DS_Store
+*.key
+*.pfx
+*.p12
+*.zip
+*.gz
+*.pem
+*.p7b
