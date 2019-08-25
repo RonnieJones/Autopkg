@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Mattermost.</string>
 	<key>Identifier</key>
-	<string>com.github.ronniejones.download.Mattermost</string>
+	<string>com.github.ronniejones.download.mattermost</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
