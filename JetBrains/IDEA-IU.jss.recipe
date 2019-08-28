@@ -5,7 +5,7 @@
   <key>Description</key>
   <string>Downloads the current release version of Intellij IDEA and imports into a JAMF Pro Server.</string>
   <key>Identifier</key>
-  <string>com.github.mosen.jss.IDEA-IU</string>
+  <string>com.github.ronniejones.jss.IDEA-IU</string>
   <key>Input</key>
   <dict>
     <key>CATEGORY</key>
