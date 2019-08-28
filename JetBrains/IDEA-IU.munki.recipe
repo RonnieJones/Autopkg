@@ -5,7 +5,7 @@
   <key>Description</key>
   <string>Downloads the current release version of Intellij IDEA and imports into Munki.</string>
   <key>Identifier</key>
-  <string>com.github.mosen.munki.IDEA-IU</string>
+  <string>com.github.ronniejones.munki.IDEA-IU</string>
   <key>Input</key>
   <dict>
     <key>NAME</key>
@@ -39,7 +39,7 @@ Together, powerful static code analysis and ergonomic design make development no
   <key>MinimumVersion</key>
   <string>0.2.9</string>
   <key>ParentRecipe</key>
-  <string>com.github.mosen.download.IDEA-IU</string>
+  <string>com.github.ronniejones.download.IDEA-IU</string>
   <key>Process</key>
   <array>
     <dict>
