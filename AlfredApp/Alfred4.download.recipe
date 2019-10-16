@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest Alfred 4.</string>
 	<key>Identifier</key>
-	<string>io.github.hjuutilainen.download.Alfred4</string>
+	<string>com.github.ronniejones.download.Alfred4</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
