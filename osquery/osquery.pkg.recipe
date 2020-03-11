@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>This recipe does nothing, since osquery is already downloaded as a pkg.</string>
 	<key>Identifier</key>
-	<string>com.github.ronniejones.pkg.osquery</string>
+	<string>com.github.ronniejones.recipes.osquery.pkg</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -14,7 +14,7 @@
 	<key>MinimumVersion</key>
 	<string>0.5.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.ronniejones.download.osquery</string>
+	<string>com.github.ronniejones.recipes.osquery.download</string>
 	<key>Process</key>
 	<array>
 		<dict>

@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of OSquery, makes a pkg of it, and uploads to the JSS.</string>
 	<key>Identifier</key>
-	<string>com.github.ronniejones.jss.osquery</string>
+	<string>com.github.ronniejones.recipes.osquery.jss</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
@@ -30,7 +30,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.ronniejones.pkg.osquery</string>
+	<string>com.github.ronniejones.recipes.osquery.pkg</string>
 	<key>Process</key>
 	<array>
 		<dict>
