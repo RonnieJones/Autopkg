@@ -30,7 +30,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.ronniejones.recipes.osquery.pkg</string>
+	<string>com.github.ronniejones.recipes.osquery.download</string>
 	<key>Process</key>
 	<array>
 		<dict>
