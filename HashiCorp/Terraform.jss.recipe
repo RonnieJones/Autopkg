@@ -25,7 +25,7 @@
 		<key>SELF_SERVICE_DESCRIPTION</key>
 		<string>Terraform provides a common configuration to launch infrastructure — from physical and virtual servers to email and DNS providers. Once launched, Terraform safely and efficiently changes infrastructure as the configuration is evolved. Simple file based configuration gives you a single view of your entire infrastructure.</string>
 		<key>SELF_SERVICE_ICON</key>
-		<string>kubectl.png</string>
+		<string>terraform.png</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
