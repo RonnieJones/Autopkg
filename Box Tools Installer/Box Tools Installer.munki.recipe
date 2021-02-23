@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Comment</key>
+	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
+	<key>Description</key>
+	<string>Downloads the latest version of Box Tools Installer and imports it into Munki.</string>
+	<key>Identifier</key>
+	<string>com.clienteng.creditkarma.munki.BoxToolsInstaller</string>
+	<key>Input</key>
+	<dict>
+		<key>APP_FILENAME</key>
+		<string>Install Box Tools</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/%NAME%</string>
+		<key>NAME</key>
+		<string>Box Tools Installer</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>description</key>
+			<string>SIMPLIFY HOW YOU WORK One platform for secure content management, workflow, and collaboration WORK FROM THE CLOUD Easily secure, manage and share all your files NOTE TAKING FOR TEAMS (BOX NOTES) Take meeting notes, share status...</string>
+			<key>developer</key>
+			<string>Box, Inc.</string>
+			<key>display_name</key>
+			<string>Box Tools Installer</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>1.0.0</string>
+	<key>ParentRecipe</key>
+	<string>com.clienteng.creditkarma.download.BoxToolsInstaller</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%pathname%</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
