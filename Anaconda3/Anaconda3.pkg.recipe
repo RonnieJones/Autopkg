@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Anaconda3, makes a pkg of it, and uploads to the JSS.</string>
 	<key>Identifier</key>
-	<string>com.github.ronniejones.pkg.anaconda3.recipe</string>
+	<string>com.github.ronniejones.pkg.Anaconda3.recipe</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>

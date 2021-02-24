@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Anaconda 3, makes a pkg of it, and uploads to the JSS.</string>
 	<key>Identifier</key>
-	<string>com.github.ronniejones.jss.Anaconda3</string>
+	<string>com.github.ronniejones.jss.Anaconda3.recipe</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
@@ -28,7 +28,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.ronniejones.pkg.Anaconda3</string>
+	<string>com.github.ronniejones.pkg.Anaconda3.recipe</string>
 	<key>Process</key>
 	<array>
 		<dict>

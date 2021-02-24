@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads and installs the current release version of Anaconda 3.</string>
 	<key>Identifier</key>
-	<string>com.github.ronniejones.install.Anaconda3</string>
+	<string>com.github.ronniejones.install.Anaconda3.recipe</string>
 	<key>Input</key>
 	<dict>
 		<key>MAJOR_VERSION</key>
@@ -16,7 +16,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.ronniejones.pkg.Anaconda3</string>
+	<string>com.github.ronniejones.pkg.Anaconda3.recipe</string>
 	<key>Process</key>
 	<array>
 		<dict>

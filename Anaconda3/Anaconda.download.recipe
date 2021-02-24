@@ -7,7 +7,7 @@
 Different installer types are available. Use INSTALLER_TYPE
 to chose between 'sh' or 'pkg'.</string>
     <key>Identifier</key>
-    <string>com.github.ronniejones.download.Anaconda</string>
+    <string>com.github.ronniejones.download.Anaconda.recipe</string>
     <key>Input</key>
     <dict>
         <key>INSTALLER_TYPE</key>
