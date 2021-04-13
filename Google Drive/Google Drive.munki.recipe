@@ -18,15 +18,15 @@
 		<dict>
 			<key>blocking_applications</key>
 			<array>
-				<string>Google Docs.app</string>
-				<string>Google Slides.app</string>
-				<string>Google Drive Helper (GPU).app</string>
-				<string>Google Sheets.app</string>
-				<string>FinderHelper.app</string>
-				<string>Google Drive Helper.app</string>
-				<string>Google Drive Helper (Renderer).app</string>
 				<string>Google Drive Helper (Plugin).app</string>
+				<string>Google Docs.app</string>
+				<string>Google Drive Helper (GPU).app</string>
+				<string>FinderHelper.app</string>
 				<string>Google Drive.app</string>
+				<string>Google Drive Helper.app</string>
+				<string>Google Slides.app</string>
+				<string>Google Sheets.app</string>
+				<string>Google Drive Helper (Renderer).app</string>
 			</array>
 			<key>catalogs</key>
 			<array>
