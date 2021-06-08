@@ -21,7 +21,7 @@
 		<key>POLICY_TEMPLATE</key>
 		<string>PolicyTemplate.xml</string>
 		<key>SELF_SERVICE_DESCRIPTION</key>
-		<string>Toggl Track data brings clarity around profitability and helps you get more done. Toggl Track works where you do Online, offline, or on-the-go...</string>
+		<string>Asana for Desktop puts Asana where you need it by pulling it out of the sea of tabs and helping you frictionlessly capture your work. By removing distraction, the desktop app helps you find flow and better control your work environment.</string>
 		<key>SELF_SERVICE_ICON</key>
 		<string>%NAME%.png</string>
 	</dict>
