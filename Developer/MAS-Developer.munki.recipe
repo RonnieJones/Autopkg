@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of Developer from the Mac App Store and imports it into Munki.</string>
+	<key>Identifier</key>
+	<string>com.clienteng.creditkarma.munki.Developer</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/%NAME%</string>
+		<key>NAME</key>
+		<string>Developer</string>
+		<key>PATH</key>
+		<string>/Applications/Developer.app</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>description</key>
+			<string>Firefox Developer Edition brings you latest features, fast performance, and the development tools you need to build for the open web. Its powerful development tools will extend your ability to work across multiple platforms from one place.</string>
+			<key>developer</key>
+			<string></string>
+			<key>display_name</key>
+			<string>Developer</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>1.0.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.nmcspadden.munki.appstore</string>
+	<key>Process</key>
+	<array/>
+</dict>
+</plist>
