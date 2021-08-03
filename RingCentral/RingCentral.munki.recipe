@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of RingCentral and imports it into Munki.</string>
+	<key>Identifier</key>
+	<string>com.clienteng.creditkarma.munki.RingCentral</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/%NAME%</string>
+		<key>NAME</key>
+		<string>RingCentral</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>blocking_applications</key>
+			<array>
+				<string>RingCentral Helper (GPU).app</string>
+				<string>RingCentral.app</string>
+				<string>RingCentral Helper (Plugin).app</string>
+				<string>RingCentral Helper (Renderer).app</string>
+				<string>mphost.app</string>
+				<string>airhost.app</string>
+				<string>RingCentral Helper.app</string>
+				<string>CptHost.app</string>
+				<string>SDK_Transcode.app</string>
+				<string>aomhost.app</string>
+				<string>capHost.app</string>
+			</array>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>description</key>
+			<string>RingCentral Office integrates phone, video, meetings, and messaging in one reliable, easy-to-use solution.</string>
+			<key>developer</key>
+			<string>RingCentral, Inc.</string>
+			<key>display_name</key>
+			<string>RingCentral</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>1.0.0</string>
+	<key>ParentRecipe</key>
+	<string>com.clienteng.creditkarma.download.RingCentral</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%pathname%</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
