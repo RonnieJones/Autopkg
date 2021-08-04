@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Comment</key>
-	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
 	<string>Downloads the latest version of RingCentral and imports it into your JSS.</string>
 	<key>Identifier</key>
@@ -19,7 +17,7 @@
 		<key>NAME</key>
 		<string>RingCentral</string>
 		<key>POLICY_CATEGORY</key>
-		<string>Testing</string>
+		<string>Communication</string>
 		<key>POLICY_TEMPLATE</key>
 		<string>PolicyTemplate.xml</string>
 		<key>SELF_SERVICE_DESCRIPTION</key>
@@ -30,7 +28,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.clienteng.creditkarma.pkg.RingCentral</string>
+	<string>com.github.bradclare.pkg.ringcentral</string>
 	<key>Process</key>
 	<array>
 		<dict>

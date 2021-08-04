@@ -32,7 +32,7 @@
 			</array>
 			<key>catalogs</key>
 			<array>
-				<string>testing</string>
+				<string>Communication</string>
 			</array>
 			<key>description</key>
 			<string>RingCentral Office integrates phone, video, meetings, and messaging in one reliable, easy-to-use solution.</string>
