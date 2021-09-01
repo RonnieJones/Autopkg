@@ -5,7 +5,7 @@
         <key>Description</key>
         <string>Converts a SplunkForwarder download into a pkg.</string>
         <key>Identifier</key>
-        <string>com.github.gerardkok.pkg.SplunkForwarder</string>
+        <string>com.github.ronniejones.pkg.SplunkForwarder</string>
         <key>Input</key>
         <dict>
             <key>NAME</key>
@@ -16,7 +16,7 @@
         <key>MinimumVersion</key>
         <string>0.3.1</string>
         <key>ParentRecipe</key>
-        <string>com.github.gerardkok.download.SplunkForwarder</string>
+        <string>com.github.ronniejones.download.SplunkForwarder</string>
         <key>Process</key>
         <array>
             <dict>
