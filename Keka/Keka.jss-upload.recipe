@@ -3,28 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Keka and creates a package.</string>
+	<string>Downloads the latest version of Keka and uploads the package to your JSS.</string>
 	<key>Identifier</key>
-	<string>com.clienteng.creditkarma.pkg.Keka</string>
+	<string>com.github.jss-recipes.jss-upload.Keka</string>
 	<key>Input</key>
 	<dict>
+		<key>CATEGORY</key>
+		<string>Productivity</string>
 		<key>NAME</key>
 		<string>Keka</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.clienteng.creditkarma.download.Keka</string>
+	<string>com.clienteng.creditkarma.pkg.Keka</string>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>app_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/Keka.app</string>
+				<key>category</key>
+				<string>%CATEGORY%</string>
+				<key>prod_name</key>
+				<string>%NAME%</string>
 			</dict>
 			<key>Processor</key>
-			<string>AppPkgCreator</string>
+			<string>JSSImporter</string>
 		</dict>
 	</array>
 </dict>
