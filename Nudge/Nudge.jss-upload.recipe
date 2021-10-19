@@ -16,7 +16,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.clienteng.creditkarma.pkg.Nudge</string>
+	<string>com.clienteng.creditkarma.download.Nudge</string>
 	<key>Process</key>
 	<array>
 		<dict>
