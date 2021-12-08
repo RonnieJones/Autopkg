@@ -2,28 +2,35 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Comment</key>
-	<string>Created with Recipe Robot v2.2.0 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Docker.</string>
+	<string>Downloads the latest version of Docker Desktop.
+
+Acceptable values for PLATFORM_ARCH include:
+- 'amd64': Downloads the Intel version of Docker. (This is the default.)
+- 'arm64': Downloads the Apple Silicon version of Docker.
+
+NOTE: The Intel build does not function with Rosetta2, so separate packaging is
+required to support Apple Silicon Macs.</string>
 	<key>Identifier</key>
-	<string>com.clienteng.creditkarma.download.Docker</string>
+	<string>com.github.creditkarma.download.DockerDesktop.intel</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>Docker</string>
+		<key>PLATFORM_ARCH</key>
+		<string>amd64</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>1.0.0</string>
+	<string>1.4.1</string>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
-				<string>%NAME%.dmg</string>
+				<string>%NAME%-%PLATFORM_ARCH%.dmg</string>
 				<key>url</key>
-				<string>https://desktop.docker.com/mac/stable/arm64/Docker.dmg?utm_source=docker&amp;utm_medium=webreferral&amp;utm_campaign=dd-smartbutton&amp;utm_location=header</string>
+				<string>https://desktop.docker.com/mac/main/%PLATFORM_ARCH%/Docker.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
@@ -38,7 +45,7 @@
 				<key>input_path</key>
 				<string>%pathname%/Docker.app</string>
 				<key>requirement</key>
-				<string>anchor apple generic and identifier "com.docker.docker" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "9BNSXJN65R")</string>
+				<string>identifier "com.docker.docker" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "9BNSXJN65R"</string>
 			</dict>
 			<key>Processor</key>
 			<string>CodeSignatureVerifier</string>
