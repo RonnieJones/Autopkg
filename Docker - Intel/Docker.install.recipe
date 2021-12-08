@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Installs the latest version of Docker.</string>
 	<key>Identifier</key>
-	<string>com.clienteng.creditkarma.install.Docker-intel</string>
+	<string>com.clienteng.creditkarma.install.Docker.intel</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>

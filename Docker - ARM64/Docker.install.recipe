@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Installs the latest version of Docker.</string>
 	<key>Identifier</key>
-	<string>com.clienteng.creditkarma.install.Docker.arm</string>
+	<string>com.clienteng.creditkarma.install.Docker.arm64</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -14,7 +14,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.creditkarma.download.DockerDesktop.arm</string>
+	<string>com.github.creditkarma.download.DockerDesktop.arm64</string>
 	<key>Process</key>
 	<array>
 		<dict>
