@@ -12,7 +12,7 @@ Acceptable values for PLATFORM_ARCH include:
 NOTE: The Intel build does not function with Rosetta2, so separate packaging is
 required to support Apple Silicon Macs.</string>
 	<key>Identifier</key>
-	<string>com.github.creditkarma.download.Docker.intel</string>
+	<string>com.clienteng.creditkarma.download.Docker.intel</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
