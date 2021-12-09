@@ -11,7 +11,7 @@
 		<key>CATEGORY</key>
 		<string>Engineering</string>
 		<key>NAME</key>
-		<string>Docker - Intel</string>
+		<string>Docker - ARM64</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
