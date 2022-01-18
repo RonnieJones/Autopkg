@@ -28,7 +28,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.clienteng.creditkarma.pkg.YubiKeyPersonalizationTool</string>
+	<string>com.clienteng.creditkarma.download.YubiKeyPersonalizationTool</string>
 	<key>Process</key>
 	<array>
 		<dict>
