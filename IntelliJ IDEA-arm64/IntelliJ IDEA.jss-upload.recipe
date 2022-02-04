@@ -3,20 +3,20 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of YubiKey Personalization Tool and uploads the package to your JSS.</string>
+	<string>Downloads the latest version of IntelliJ IDEA and uploads the package to your JSS.</string>
 	<key>Identifier</key>
-	<string>com.clienteng.creditkarma.jss-upload.YubiKeyPersonalizationTool</string>
+	<string>com.clienteng.creditkarma.jss-upload.IntelliJIDEAarm64</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
 		<string>Productivity</string>
 		<key>NAME</key>
-		<string>YubiKey Personalization Tool</string>
+		<string>IntelliJ IDEA-arm64</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.clienteng.creditkarma.install.YubiKeyPersonalizationTool</string>
+	<string>com.clienteng.creditkarma.pkg.IntelliJIDEAarm64</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -25,7 +25,7 @@
 				<key>category</key>
 				<string>%CATEGORY%</string>
 				<key>prod_name</key>
-				<string>%NAME%</string>
+				<string>%NAME%-arm64</string>
 			</dict>
 			<key>Processor</key>
 			<string>JSSImporter</string>
