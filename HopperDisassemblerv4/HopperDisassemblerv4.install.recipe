@@ -28,7 +28,7 @@
 						<key>destination_path</key>
 						<string>/Applications</string>
 						<key>source_item</key>
-						<string>Hopper Disassembler v4.app</string>
+						<string>Hopper Disassembler.app</string>
 					</dict>
 				</array>
 			</dict>
