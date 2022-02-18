@@ -28,7 +28,7 @@
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.clienteng.creditkarma.pkg.BESAgent</string>
+	<string>com.clienteng.creditkarma.install.BESAgent</string>
 	<key>Process</key>
 	<array>
 		<dict>
