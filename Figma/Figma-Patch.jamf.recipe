@@ -1,25 +1,55 @@
----
-Identifier: com.creditkarma.autopkg-recipes.jamf.Figma-patch
-ParentRecipe: com.creditkarma.autopkg-recipes.jamf.Figma
-MinimumVersion: '2.3'
-
-Input:
-  NAME: Figma
-  SOFTWARE_TITLE: '%NAME%'
-  CATEGORY: Design
-  PATCH_NAME: Auto-Update - %NAME%
-  PATCH_SOFTWARE_TITLE: '%NAME%'
-  PATCH_TEMPLATE: PatchTemplate-selfservice.xml
-  POLICY_NAME: '%NAME%'
-  PATCH_ENABLED: 'true'
-  PATCH_UNKNOWN: 'true'
-  PATCH_GRACE: '20'
-  PATCH_ICON_POLICY_NAME: '%NAME%'
-
-Process:
-  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPatchUploader
-    Arguments:
-      patch_name: '%PATCH_NAME%'
-      patch_template: '%PATCH_TEMPLATE%'
-      patch_softwaretitle: '%PATCH_SOFTWARE_TITLE%'
-      patch_icon_policy_name: '%PATCH_ICON_POLICY_NAME%'
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>com.creditkarma.autopkg-recipes.jamf.Figma-patch</string>
+	<key>Input</key>
+	<dict>
+		<key>CATEGORY</key>
+		<string>Design</string>
+		<key>NAME</key>
+		<string>Figma</string>
+		<key>PATCH_ENABLED</key>
+		<string>true</string>
+		<key>PATCH_GRACE</key>
+		<string>20</string>
+		<key>PATCH_ICON_POLICY_NAME</key>
+		<string>%NAME%</string>
+		<key>PATCH_NAME</key>
+		<string>Auto-Update - %NAME%</string>
+		<key>PATCH_SOFTWARE_TITLE</key>
+		<string>%NAME%</string>
+		<key>PATCH_TEMPLATE</key>
+		<string>PatchTemplate-selfservice.xml</string>
+		<key>PATCH_UNKNOWN</key>
+		<string>true</string>
+		<key>POLICY_NAME</key>
+		<string>%NAME%</string>
+		<key>SOFTWARE_TITLE</key>
+		<string>%NAME%</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>2.3</string>
+	<key>ParentRecipe</key>
+	<string>com.creditkarma.autopkg-recipes.jamf.Figma</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>patch_icon_policy_name</key>
+				<string>%PATCH_ICON_POLICY_NAME%</string>
+				<key>patch_name</key>
+				<string>%PATCH_NAME%</string>
+				<key>patch_softwaretitle</key>
+				<string>%PATCH_SOFTWARE_TITLE%</string>
+				<key>patch_template</key>
+				<string>%PATCH_TEMPLATE%</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.jamf-upload.processors/JamfPatchUploader</string>
+		</dict>
+	</array>
+</dict>
+</plist>

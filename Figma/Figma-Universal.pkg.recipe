@@ -1,64 +1,123 @@
----
-Description:
-  Downloads both Arm and Intel verions of the Figma App, and packages them
-  into a universal installer
-Identifier: com.creditkarma.autopkg-recipes.pkg.Figma-Universal
-ParentRecipe: com.creditkarma.autopkg-recipes.download.Figma-Universal
-MinimumVersion: '2.3'
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads both Arm and Intel verions of the Figma App, and packages them into a universal installer</string>
+	<key>Identifier</key>
+	<string>com.creditkarma.autopkg-recipes.pkg.Figma-Universal</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Figma</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>2.3</string>
+	<key>ParentRecipe</key>
+	<string>com.creditkarma.autopkg-recipes.download.Figma-Universal</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkgdirs</key>
+				<dict>
+					<key>Scripts</key>
+					<string>0775</string>
+					<key>pkgroot</key>
+					<string>0775</string>
+				</dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/Universal</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>app_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpack/arm64/Figma.app</string>
+				<key>pkg_path</key>
+				<string>%RECIPE_CACHE_DIR%/Universal/Scripts/%NAME%-arm64-%version%.pkg</string>
+			</dict>
+			<key>Processor</key>
+			<string>AppPkgCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>app_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpack/x86_64/Figma.app</string>
+				<key>pkg_path</key>
+				<string>%RECIPE_CACHE_DIR%/Universal/Scripts/%NAME%-x86_64-%version%.pkg</string>
+			</dict>
+			<key>Processor</key>
+			<string>AppPkgCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>file_content</key>
+				<string>#!/bin/bash
 
-Input:
-  NAME: Figma
+arm64_package="%NAME%-arm64-%version%.pkg"
+x86_64_package="%NAME%-x86_64-%version%.pkg"
 
-Process:
-  - Processor: PkgRootCreator
-    Arguments:
-      pkgroot: '%RECIPE_CACHE_DIR%/Universal'
-      pkgdirs:
-        pkgroot: '0775'
-        Scripts: '0775'
+if [[ $( /usr/bin/arch ) = arm64* ]]; then
+  /usr/sbin/installer -pkg "$arm64_package" -target "$3"
+else
+  /usr/sbin/installer -pkg "$x86_64_package" -target "$3"
+fi
 
-  - Processor: AppPkgCreator
-    Arguments:
-      app_path: '%RECIPE_CACHE_DIR%/unpack/arm64/Figma.app'
-      pkg_path: '%RECIPE_CACHE_DIR%/Universal/Scripts/%NAME%-arm64-%version%.pkg'
-
-  - Processor: AppPkgCreator
-    Arguments:
-      app_path: '%RECIPE_CACHE_DIR%/unpack/x86_64/Figma.app'
-      pkg_path: '%RECIPE_CACHE_DIR%/Universal/Scripts/%NAME%-x86_64-%version%.pkg'
-
-  - Processor: FileCreator
-    Arguments:
-      file_path: '%RECIPE_CACHE_DIR%/Universal/Scripts/preinstall'
-      file_mode: '0755'
-      file_content: |
-        #!/bin/bash
-
-        arm64_package="%NAME%-arm64-%version%.pkg"
-        x86_64_package="%NAME%-x86_64-%version%.pkg"
-
-        if [[ $( /usr/bin/arch ) = arm64* ]]; then
-          /usr/sbin/installer -pkg "$arm64_package" -target "$3"
-        else
-          /usr/sbin/installer -pkg "$x86_64_package" -target "$3"
-        fi
-
-        exit 0
-
-  - Processor: PkgCreator
-    Arguments:
-      pkg_request:
-        id: '%bundleid%'
-        version: '%version%'
-        options: purge_ds_store
-        pkgname: '%NAME%-Universal-%version%'
-        pkgdir: '%RECIPE_CACHE_DIR%'
-        scripts: '%RECIPE_CACHE_DIR%/Universal/Scripts'
-        pkgroot: '%RECIPE_CACHE_DIR%/Universal/pkgroot'
-
-  - Processor: com.github.smithjw.processors/FriendlyPathDeleter
-    Arguments:
-      fail_deleter_silently: true
-      path_list:
-        - '%RECIPE_CACHE_DIR%/Universal'
-        - '%RECIPE_CACHE_DIR%/unpack'
+exit 0
+</string>
+				<key>file_mode</key>
+				<string>0755</string>
+				<key>file_path</key>
+				<string>%RECIPE_CACHE_DIR%/Universal/Scripts/preinstall</string>
+			</dict>
+			<key>Processor</key>
+			<string>FileCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_request</key>
+				<dict>
+					<key>id</key>
+					<string>%bundleid%</string>
+					<key>options</key>
+					<string>purge_ds_store</string>
+					<key>pkgdir</key>
+					<string>%RECIPE_CACHE_DIR%</string>
+					<key>pkgname</key>
+					<string>%NAME%-Universal-%version%</string>
+					<key>pkgroot</key>
+					<string>%RECIPE_CACHE_DIR%/Universal/pkgroot</string>
+					<key>scripts</key>
+					<string>%RECIPE_CACHE_DIR%/Universal/Scripts</string>
+					<key>version</key>
+					<string>%version%</string>
+				</dict>
+			</dict>
+			<key>Processor</key>
+			<string>PkgCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>fail_deleter_silently</key>
+				<true/>
+				<key>path_list</key>
+				<array>
+					<string>%RECIPE_CACHE_DIR%/Universal</string>
+					<string>%RECIPE_CACHE_DIR%/unpack</string>
+				</array>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.smithjw.processors/FriendlyPathDeleter</string>
+		</dict>
+	</array>
+</dict>
+</plist>

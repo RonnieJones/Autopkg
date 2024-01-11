@@ -1,47 +1,101 @@
----
-Identifier: com.creditkarma.autopkg-recipes.jamf.Figma-Universal
-ParentRecipe: com.creditkarma.autopkg-recipes.pkg.Figma-Universal
-MinimumVersion: '2.3'
-
-Input:
-  NAME: Figma
-  SOFTWARE_TITLE: '%NAME%'
-  CATEGORY: Design
-  GROUP_NAME: '%NAME%-update-smart'
-  GROUP_TEMPLATE: SmartGroup-update-smart.xml
-  POLICY_CATEGORY: Testing
-  POLICY_TEMPLATE: PolicyTemplate.xml
-  POLICY_NAME: Install Latest %NAME%
-  POLICY_RUN_COMMAND: ' '
-  SELF_SERVICE_DISPLAY_NAME: Install Latest %NAME%
-  SELF_SERVICE_DESCRIPTION: |
-    With Figma, everyone works towards a shared goal. This has enabled our product teams to ship new
-    products faster and feel more confident in their decisions.
-  SELF_SERVICE_ICON: '%SOFTWARE_TITLE%.png'
-  INSTALL_BUTTON_TEXT: Install
-  REINSTALL_BUTTON_TEXT: Install
-  UPDATE_PREDICATE: pkg_uploaded == False
-
-Process:
-  - Processor: com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader
-    Arguments:
-      category_name: '%CATEGORY%'
-
-  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
-    Arguments:
-      pkg_category: '%CATEGORY%'
-
-  - Processor: StopProcessingIf
-    Arguments:
-      predicate: '%UPDATE_PREDICATE%'
-
-  - Processor: com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader
-    Arguments:
-      computergroup_template: '%GROUP_TEMPLATE%'
-      computergroup_name: '%GROUP_NAME%'
-
-  - Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
-    Arguments:
-      policy_template: '%POLICY_TEMPLATE%'
-      policy_name: '%POLICY_NAME%'
-      icon: '%SELF_SERVICE_ICON%'
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>com.creditkarma.autopkg-recipes.jamf.Figma-Universal</string>
+	<key>Input</key>
+	<dict>
+		<key>CATEGORY</key>
+		<string>Design</string>
+		<key>GROUP_NAME</key>
+		<string>%NAME%-update-smart</string>
+		<key>GROUP_TEMPLATE</key>
+		<string>SmartGroup-update-smart.xml</string>
+		<key>INSTALL_BUTTON_TEXT</key>
+		<string>Install</string>
+		<key>NAME</key>
+		<string>Figma</string>
+		<key>POLICY_CATEGORY</key>
+		<string>Testing</string>
+		<key>POLICY_NAME</key>
+		<string>Install Latest %NAME%</string>
+		<key>POLICY_RUN_COMMAND</key>
+		<string> </string>
+		<key>POLICY_TEMPLATE</key>
+		<string>PolicyTemplate.xml</string>
+		<key>REINSTALL_BUTTON_TEXT</key>
+		<string>Install</string>
+		<key>SELF_SERVICE_DESCRIPTION</key>
+		<string>With Figma, everyone works towards a shared goal. This has enabled our product teams to ship new
+products faster and feel more confident in their decisions.
+</string>
+		<key>SELF_SERVICE_DISPLAY_NAME</key>
+		<string>Install Latest %NAME%</string>
+		<key>SELF_SERVICE_ICON</key>
+		<string>%SOFTWARE_TITLE%.png</string>
+		<key>SOFTWARE_TITLE</key>
+		<string>%NAME%</string>
+		<key>UPDATE_PREDICATE</key>
+		<string>pkg_uploaded == False</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>2.3</string>
+	<key>ParentRecipe</key>
+	<string>com.creditkarma.autopkg-recipes.pkg.Figma-Universal</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>category_name</key>
+				<string>%CATEGORY%</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.jamf-upload.processors/JamfCategoryUploader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_category</key>
+				<string>%CATEGORY%</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.jamf-upload.processors/JamfPackageUploader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>predicate</key>
+				<string>%UPDATE_PREDICATE%</string>
+			</dict>
+			<key>Processor</key>
+			<string>StopProcessingIf</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>computergroup_name</key>
+				<string>%GROUP_NAME%</string>
+				<key>computergroup_template</key>
+				<string>%GROUP_TEMPLATE%</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>icon</key>
+				<string>%SELF_SERVICE_ICON%</string>
+				<key>policy_name</key>
+				<string>%POLICY_NAME%</string>
+				<key>policy_template</key>
+				<string>%POLICY_TEMPLATE%</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader</string>
+		</dict>
+	</array>
+</dict>
+</plist>
