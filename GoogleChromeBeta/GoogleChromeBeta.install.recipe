@@ -11,7 +11,7 @@
     <key>MinimumVersion</key>
     <string>0.4.0</string>
     <key>ParentRecipe</key>
-    <string>ccom.clienteng.creditkarma.download.googlechromebeta</string>
+    <string>com.clienteng.creditkarma.download.googlechromebeta</string>
     <key>Process</key>
     <array>
         <dict>
