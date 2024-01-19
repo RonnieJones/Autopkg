@@ -31,7 +31,7 @@
 			<key>TESTING_GROUP_NAME</key>
 			<string>Testing</string>
 			<key>UPDATE_PREDICATE</key>
-			<string>pkg_uploaded == True</string>
+			<string>pkg_uploaded == False</string>
 		</dict>
 		<key>MinimumVersion</key>
 		<string>2.3</string>
