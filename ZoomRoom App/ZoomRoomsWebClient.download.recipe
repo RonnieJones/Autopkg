@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of ZoomRoomsWebClient.</string>
 	<key>Identifier</key>
-	<string>com.creditkarma.autopkg-recipes.download.ZoomRoomsWebClient</string>
+	<string>com.clienteng.creditkarma.download.ZoomRoomsWebClient</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>

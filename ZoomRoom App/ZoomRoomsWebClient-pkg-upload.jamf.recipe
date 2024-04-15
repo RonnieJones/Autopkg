@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of ZoomRoomsWebClient and uploads the package to Jamf.</string>
 	<key>Identifier</key>
-	<string>com.creditkarma.autopkg-recipes.jamf.ZoomRoomsWebClient</string>
+	<string>com.clienteng.creditkarma.jamf-upload.ZoomRoomsWebClient</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
@@ -16,7 +16,7 @@
 	<key>MinimumVersion</key>
 	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>com.creditkarma.autopkg-recipes.pkg.ZoomRoomsWebClient</string>
+	<string>com.clienteng.creditkarma.pkg.ZoomRoomsWebClient</string>
 	<key>Process</key>
 	<array>
 		<dict>
