@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Identifier</key>
-    <string>com.github.creditkarma.download.NexThinkCollector</string>
+    <string>com.creditkarma.autopkg-recipes.download.NexThinkCollector</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
