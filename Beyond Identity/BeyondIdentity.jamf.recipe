@@ -21,7 +21,7 @@
 		<key>POLICY_TEMPLATE</key>
 		<string>JamfPolicyTemplate.xml</string>
 		<key>SELF_SERVICE_DESCRIPTION</key>
-		<string>macOS agent used to display custom notifications and alerts to the end user.</string>
+		<string>Beyond Identity for macOS is a secure access platform designed to eliminate passwords.</string>
 		<key>SELF_SERVICE_DISPLAY_NAME</key>
 		<string>Install Latest %NAME%</string>
 		<key>SELF_SERVICE_ICON</key>
