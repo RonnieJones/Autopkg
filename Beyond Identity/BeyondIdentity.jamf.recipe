@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>Identifier</key>
-	<string>com.creditkarma.autopkg-recipes.jamf.NexThinkCollector</string>
+	<string>com.clienteng.creditkarma.jamf.BeyondIdentity</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
-		<string>Compliance</string>
+		<string>Utility</string>
 		<key>GROUP_NAME</key>
-		<string>nexthink-update-smart</string>
+		<string>%NAME%-update-smart</string>
 		<key>GROUP_TEMPLATE</key>
 		<string>JamfSmartGroupTemplate.xml</string>
 		<key>NAME</key>
-		<string>Prune</string>
+		<string>IBM Notifier</string>
 		<key>POLICY_CATEGORY</key>
 		<string>Testing</string>
 		<key>POLICY_NAME</key>
@@ -21,7 +21,7 @@
 		<key>POLICY_TEMPLATE</key>
 		<string>JamfPolicyTemplate.xml</string>
 		<key>SELF_SERVICE_DESCRIPTION</key>
-		<string>Remove unused items from your Jamf server</string>
+		<string>macOS agent used to display custom notifications and alerts to the end user.</string>
 		<key>SELF_SERVICE_DISPLAY_NAME</key>
 		<string>Install Latest %NAME%</string>
 		<key>SELF_SERVICE_ICON</key>
@@ -34,7 +34,7 @@
 	<key>MinimumVersion</key>
 	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>NexThinkCollector/NexThinkCollectorUninstaller.pkg.recipe</string>
+	<string>com.clienteng.creditkarma.pkg.BeyondIdentity</string>
 	<key>Process</key>
 	<array>
 		<dict>

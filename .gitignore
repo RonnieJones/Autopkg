@@ -7,3 +7,5 @@
 *.pem
 *.p7b
 *.DS_Store
+
+.codegpt
