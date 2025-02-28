@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Identifier</key>
-	<string>com.clienteng.creditkarma.jamf.BeyondIdentity</string>
+	<string>com.creditkarma.jamf.BeyondIdentity</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
@@ -34,7 +34,7 @@
 	<key>MinimumVersion</key>
 	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>com.clienteng.creditkarma.pkg.BeyondIdentity</string>
+	<string>com.creditkarma.pkg.BeyondIdentity</string>
 	<key>Process</key>
 	<array>
 		<dict>
