@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Beyond Identity</string>
+		<string>Beyond Identity.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>2.3</string>
